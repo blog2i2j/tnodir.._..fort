@@ -1,14 +1,15 @@
-#ifndef TOOLBUTTON_H
-#define TOOLBUTTON_H
+#ifndef PUSHBUTTON_H
+#define PUSHBUTTON_H
 
-#include <QToolButton>
+#include <QPushButton>
 
-class ToolButton : public QToolButton
+class PushButton : public QPushButton
 {
     Q_OBJECT
 
 public:
-    explicit ToolButton(QWidget *parent = nullptr);
+    explicit PushButton(QWidget *parent = nullptr);
+    explicit PushButton(const QIcon &icon, const QString &text, QWidget *parent = nullptr);
 
 protected:
     bool mousePressed() const { return m_mousePressed; }
@@ -23,4 +24,4 @@ private:
     bool m_mousePressed : 1 = false;
 };
 
-#endif // TOOLBUTTON_H
+#endif // PUSHBUTTON_H

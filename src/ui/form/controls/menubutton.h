@@ -1,11 +1,11 @@
 #ifndef MENUBUTTON_H
 #define MENUBUTTON_H
 
-#include <QPushButton>
+#include "pushbutton.h"
 
 class TrayIcon;
 
-class MenuButton : public QPushButton
+class MenuButton : public PushButton
 {
     Q_OBJECT
 
@@ -18,11 +18,7 @@ private:
     void setupUi();
 
 protected:
-    void mousePressEvent(QMouseEvent *e) override;
     void mouseReleaseEvent(QMouseEvent *e) override;
-
-private:
-    bool m_mousePressed : 1 = false;
 };
 
 #endif // MENUBUTTON_H
